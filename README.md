@@ -1,0 +1,39 @@
+# [AlphaBankApi](https://github.com/VctorMoraes/AlphaBankApi)
+
+## Projeto
+A aplicação tem como objetivo ser uma API para um APP de simulação uma solicitação de empréstimo, [AlphaBank](https://github.com/VctorMoraes/AlphaBankApi).
+
+## How To
+AlphaBankApi é uma aplicação Kotlin e SpringBoot. O projeto se encontra no seguinte repositório: https://github.com/VctorMoraes/AlphaBankApi
+
+### Methods
+
+| Method   | URL       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `POST` | `/` | Salva usuário no banco de dados e retorna o resultado da solicitação de empréstimo |
+
+#### Example body
+
+```
+{
+  "name": "Victor Moraes",
+  "age": 22
+  "month_income": 1000.0,
+  "city": "Campinas"
+}
+```
+
+#### Example return
+```
+{
+  "status": "DECLINED",
+}
+```
+
+OR
+```
+{
+  "status": "APPROVED",
+  "max_amount": 10000.0
+}
+```
