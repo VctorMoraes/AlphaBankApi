@@ -29,12 +29,4 @@ class LoanController(val service: LoanService) {
         }
         return service.saveLoan(loanRequest)
     }
-
-//    @GetMapping("/request-loan")
-//    fun requestLoan(
-//        @RequestParam("name") name: String
-//    ) = service.requestLoan(name)
-
-//    @GetMapping("/user")
-//    fun index(@RequestParam("name") name: String) = "Hello, $name!"
 }
