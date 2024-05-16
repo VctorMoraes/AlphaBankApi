@@ -6,11 +6,13 @@ A aplicação tem como objetivo ser uma API para um APP de simulação uma solic
 ## How To
 AlphaBankApi é uma aplicação Kotlin e SpringBoot. O projeto se encontra no seguinte repositório: https://github.com/VctorMoraes/AlphaBankApi
 
-### Methods
+### Request Loan
 
 | Method   | URL       | Descrição                           |
 | :---------- | :--------- | :---------------------------------- |
 | `POST` | `/` | Salva usuário no banco de dados e retorna o resultado da solicitação de empréstimo |
+
+Se `month_income` for maior que 5000.0, o empréstimo é aprovado, como o valor máximo de 3 * `month_income`, senão, o empréstimo é recusado.
 
 #### Example body
 
