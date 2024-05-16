@@ -1,7 +1,7 @@
-package com.victor.springdemo.service
+package com.victor.alphabank.service
 
-import com.victor.springdemo.data.LoanRequest
-import com.victor.springdemo.data.User
+import com.victor.alphabank.data.LoanRequest
+import com.victor.alphabank.data.User
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.jdbc.core.query
 import org.springframework.stereotype.Service
@@ -10,7 +10,7 @@ import java.util.*
 @Service
 class LoanService(val db: JdbcTemplate) {
 
-    fun findUsers(): List<User> = db.query("SELECT * FROM user") { response, _ ->
+    fun findUsers(): List<User> = db.query("SELECT * FROM `user`") { response, _ ->
         User(
             response.getString("ID"),
             response.getString("name"),
@@ -21,7 +21,7 @@ class LoanService(val db: JdbcTemplate) {
     }
 
     fun findUserById(id: String): List<User> =
-        db.query("SELECT * FROM user WHERE id = ?", id) { response, _ ->
+        db.query("SELECT * FROM `user` WHERE id = ?", id) { response, _ ->
             User(
                 response.getString("ID"),
                 response.getString("name"),
@@ -34,7 +34,7 @@ class LoanService(val db: JdbcTemplate) {
     fun saveUser(user: User): String {
         val id = user.id ?: UUID.randomUUID().toString()
         db.update(
-            "INSERT INTO user VALUES ( ?, ?, ?, ?, ?)",
+            "INSERT INTO `user` VALUES ( ?, ?, ?, ?, ?)",
             id, user.name, user.age, user.monthIncome, user.city
         )
 
@@ -53,17 +53,3 @@ class LoanService(val db: JdbcTemplate) {
         )
     }
 }
-
-//@Service
-//class MessageService(val db: MessageRepository) {
-//
-//    fun findMessages(): List<Message> = db.findAll().toList()
-//
-//    fun findMessageById(id: String): List<Message> = db.findById(id).toList()
-//
-//    fun requestLoan(name: String) = db.findById(name).toList()
-//
-//    fun save(message: Message) {
-//        db.save(message)
-//    }
-//}

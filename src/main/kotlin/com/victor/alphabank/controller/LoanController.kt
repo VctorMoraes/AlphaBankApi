@@ -1,8 +1,8 @@
-package com.victor.springdemo.controller
+package com.victor.alphabank.controller
 
-import com.victor.springdemo.data.LoanRequest
-import com.victor.springdemo.data.User
-import com.victor.springdemo.service.LoanService
+import com.victor.alphabank.data.LoanRequest
+import com.victor.alphabank.data.User
+import com.victor.alphabank.service.LoanService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping

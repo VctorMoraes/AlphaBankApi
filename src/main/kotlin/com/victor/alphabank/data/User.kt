@@ -1,4 +1,4 @@
-package com.victor.springdemo.data
+package com.victor.alphabank.data
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table
