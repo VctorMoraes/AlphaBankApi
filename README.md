@@ -37,3 +37,11 @@ OR
   "max_amount": 10000.0
 }
 ```
+
+## Database
+
+JBDC Template utilizando o seguinte schema: [Schema](https://github.com/VctorMoraes/AlphaBankApi/blob/main/src/main/resources/schema.sql)
+
+![image](https://github.com/VctorMoraes/AlphaBankApi/assets/37370587/27169edb-2521-48ec-8bdb-9d1a30cf14d4)
+
+
